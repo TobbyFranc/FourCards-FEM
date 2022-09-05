@@ -1,0 +1,263 @@
+:root{
+
+ /* Colors */
+
+/* Primary Colors*/
+
+--ColorRedBox1: hsl(0, 78%, 62%);
+--ColorCyanBox2Up: hsl(180, 62%, 55%);
+--ColorOrangeBox2Down: hsl(34, 97%, 64%);
+--ColorBlue4: hsl(212, 86%, 64%);
+
+/* Neutral */
+
+--ColorVeryDarkBlueHeader: hsl(234, 12%, 34%);
+--ColorGrayishBlueParagraph: hsl(229, 6%, 66%);
+--ColorBGVeryLightGray: hsl(0, 0%, 98%);
+
+/* Shadow */
+
+--ColorShadow: hsl(230, 11%, 89%);
+
+/* Typography */
+
+/* Fonts */
+
+
+--Fontsize: 15px;
+--font-family: 'Poppins', sans-serif;
+--FontLight: 200;
+--FontMedium: 400;
+--FontBold: 600;
+
+/* Margins */
+--MarginText: 2rem;
+--marginCards: 1.5rem;
+--marginPowerHeaderText: 0.4rem;
+
+/* card component */
+
+--cardWidth: 300px;
+
+}
+
+*, *::before, *::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, main{
+    font-family: var(--font-family);
+    background-color: var(--BGVeryLightGray);
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    text-align: center;
+    width: 100%;
+    min-height: 100vh;
+
+}
+
+
+/* Header text */
+
+.textDescription{
+    margin: auto  12rem;
+}
+
+.textDescription span{
+    font-size: 1.6rem;
+    font-weight: var(--FontLight);
+    color: var(--ColorVeryDarkBlueHeader);
+    padding-top: 10px;
+    margin-top: 12px;
+}
+
+.textDescription .boldHead{
+    font-size: 1.6rem;
+    font-weight: var(--FontBold);
+    color: var(--ColorVeryDarkBlueHeader);
+    margin: var(--marginPowerHeaderText) 0;
+}
+
+.textDescription p{
+    font-size: 12px;
+    font-weight: var(--FontMedium);
+    color: var(--ColorGrayishBlueParagraph);
+    max-width: 60%;
+    margin: auto;
+}
+
+/* Header text design ends here */
+
+
+
+/* the card components design starts below */
+
+.cardHolder{
+    display: flex;
+    align-content: flex-start;
+    align-items: center;
+}
+
+
+.cardBoxHolder{
+    display: flex;
+    flex-direction: column;
+}
+
+.cardBox{
+    width: var(--cardWidth);
+    min-height: 200px;
+    text-align: left;
+    background-color: var(--BGVeryLightGray);
+    padding: 1.5rem;
+    margin: var(--marginCards);
+    border-radius: 6px;
+    box-shadow: 0 3px 16px 6px var(--ColorShadow);
+    overflow: hidden;
+    position: relative;
+}
+
+.cardBox p{
+    font-size: 12px;
+    color: var(--ColorGrayishBlueParagraph);
+    padding: 4px 0;
+    font-weight: var(--FontBold);
+    line-height: 1.4rem;
+}
+
+.cardBox span{
+    font-size: 16px;
+    font-weight: var(--FontBold);
+    color: var(--ColorVeryDarkBlueHeader);
+}
+
+
+/* card color tags */
+
+.supervisor::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 8px;
+    background-color: var(--ColorCyanBox2Up);
+}
+
+.Builder::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 8px;
+    background-color: var(--ColorRedBox1);
+}
+
+.Karma::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 8px;
+    background-color: var(--ColorOrangeBox2Down);
+}
+
+.calculator::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 8px;
+    background-color: var(--ColorBlue4);
+}
+
+/* card color tags */
+
+.cardIcon{
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    right: 30px;
+    bottom: 30px;
+}
+
+
+/* Responsiveness with media query */
+
+
+@media screen and (max-width: 900px) {
+
+/* body adjustments */
+
+    body{
+        margin: var(--marginPowerHeaderText) 1rem;
+    }
+
+    /* mobile view adjustment for the header text descriptions */
+
+    .textDescription{
+        margin: 0;
+        padding: 1.4rem;
+    }
+
+    .textDescription span{
+        font-size: 1.4rem;
+        font-weight: var(--FontMedium);
+
+    }
+    
+    .textDescription .boldHead{
+        font-size: 1.5rem;
+    }
+
+
+    /* Header text ends */
+
+
+    .cardHolder{
+        flex-direction: column;
+    }
+
+    .cardBox{
+        max-width: 500px;
+    }
+
+}
+
+@media screen and (max-width: 400px) {
+
+
+    .cardBox{
+        width: 300px;
+    }
+
+    .textDescription p{
+        max-width: 100%;
+        padding: 0 12px;
+    }
+
+}
+
+
+/*  Footer */
+
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+    margin-bottom: 6px;
+}
+.attribution a {
+    color: var(--ColorCyanBox2Up);
+    text-decoration: none;
+}
